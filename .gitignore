@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.vscode/
+.idea/
+# keep sample_network_log.txt; ignore your own scratch logs
+network_log.txt

@@ -1,0 +1,59 @@
+Sniffer started on lo at 2026-11-05 13:10:01 (platform: Linux)
+----------------------------------------------------------------------
+PACKET LOG
+----------------------------------------------------------------------
+[13:10:03.236] #1     TCP   127.0.0.1:41908 -> 127.0.0.1:8080  len=60 ttl=64 flags=[SYN] seq=2186730463 ack=0 payload=0B
+[13:10:03.236] #2     TCP   127.0.0.1:8080 -> 127.0.0.1:41908  len=60 ttl=64 flags=[SYN,ACK] seq=1015968576 ack=2186730464 payload=0B
+[13:10:03.236] #3     TCP   127.0.0.1:41908 -> 127.0.0.1:8080  len=52 ttl=64 flags=[ACK] seq=2186730464 ack=1015968577 payload=0B
+[13:10:03.237] #4     TCP   127.0.0.1:41908 -> 127.0.0.1:8080  len=129 ttl=64 flags=[PSH,ACK] seq=2186730464 ack=1015968577 payload=77B
+           payload: 47 45 54 20 2f 20 48 54 54 50 2f 31 2e 31 0d 0a 48 6f 73 74 3a 20 31 32 37 2e 30 2e 30 2e 31 3a 38 30 38 30 0d 0a 55 73 65 72 2d 41 67 65 6e 74  |GET / HTTP/1.1..Host: 127.0.0.1:8080..User-Agent| ... (+29 bytes)
+[13:10:03.237] #5     TCP   127.0.0.1:8080 -> 127.0.0.1:41908  len=52 ttl=64 flags=[ACK] seq=1015968577 ack=2186730541 payload=0B
+[13:10:03.238] #6     TCP   127.0.0.1:8080 -> 127.0.0.1:41908  len=207 ttl=64 flags=[PSH,ACK] seq=1015968577 ack=2186730541 payload=155B
+           payload: 48 54 54 50 2f 31 2e 30 20 32 30 30 20 4f 4b 0d 0a 53 65 72 76 65 72 3a 20 53 69 6d 70 6c 65 48 54 54 50 2f 30 2e 36 20 50 79 74 68 6f 6e 2f 33  |HTTP/1.0 200 OK..Server: SimpleHTTP/0.6 Python/3| ... (+107 bytes)
+[13:10:03.238] #7     TCP   127.0.0.1:41908 -> 127.0.0.1:8080  len=52 ttl=64 flags=[ACK] seq=2186730541 ack=1015968732 payload=0B
+[13:10:03.238] #8     TCP   127.0.0.1:8080 -> 127.0.0.1:41908  len=367 ttl=64 flags=[PSH,ACK] seq=1015968732 ack=2186730541 payload=315B
+           payload: 3c 21 44 4f 43 54 59 50 45 20 48 54 4d 4c 3e 0a 3c 68 74 6d 6c 20 6c 61 6e 67 3d 22 65 6e 22 3e 0a 3c 68 65 61 64 3e 0a 3c 6d 65 74 61 20 63 68  |<!DOCTYPE HTML>.<html lang="en">.<head>.<meta ch| ... (+267 bytes)
+[13:10:03.238] #9     TCP   127.0.0.1:41908 -> 127.0.0.1:8080  len=52 ttl=64 flags=[ACK] seq=2186730541 ack=1015969047 payload=0B
+[13:10:03.238] #10    TCP   127.0.0.1:8080 -> 127.0.0.1:41908  len=52 ttl=64 flags=[FIN,ACK] seq=1015969047 ack=2186730541 payload=0B
+[13:10:03.239] #11    TCP   127.0.0.1:41908 -> 127.0.0.1:8080  len=52 ttl=64 flags=[FIN,ACK] seq=2186730541 ack=1015969048 payload=0B
+[13:10:03.239] #12    TCP   127.0.0.1:8080 -> 127.0.0.1:41908  len=52 ttl=64 flags=[ACK] seq=1015969048 ack=2186730542 payload=0B
+[13:10:03.266] #13    UDP   127.0.0.1:55564 -> 127.0.0.1:5353  len=47 ttl=64 udp_len=27 payload=19B
+           payload: 68 65 6c 6c 6f 20 66 72 6f 6d 20 75 64 70 20 74 65 73 74  |hello from udp test|
+[13:10:03.266] #14    ICMP  127.0.0.1 -> 127.0.0.1  len=75 ttl=64 icmp_type=3 code=3 payload=51B
+           payload: 00 00 00 00 45 00 00 2f 06 27 40 00 40 11 36 95 7f 00 00 01 7f 00 00 01 d9 0c 14 e9 00 1b fe 2e 68 65 6c 6c 6f 20 66 72 6f 6d 20 75 64 70 20 74  |....E../.'@.@.6.................hello from udp t| ... (+3 bytes)
+[13:10:03.269] #15    UDP   127.0.0.1:55564 -> 127.0.0.1:53  len=54 ttl=64 udp_len=34 payload=26B
+           payload: 44 4e 53 2d 6c 69 6b 65 20 71 75 65 72 79 20 65 78 61 6d 70 6c 65 2e 63 6f 6d  |DNS-like query example.com|
+[13:10:03.269] #16    ICMP  127.0.0.1 -> 127.0.0.1  len=82 ttl=64 icmp_type=3 code=3 payload=58B
+           payload: 00 00 00 00 45 00 00 36 06 28 40 00 40 11 36 8d 7f 00 00 01 7f 00 00 01 d9 0c 00 35 00 22 fe 35 44 4e 53 2d 6c 69 6b 65 20 71 75 65 72 79 20 65  |....E..6.(@.@.6............5.".5DNS-like query e| ... (+10 bytes)
+
+======================================================================
+TRAFFIC SUMMARY STATISTICS
+======================================================================
+Generated        : 2026-11-05 13:10:08
+Capture duration : 6.5 s
+Total packets    : 16
+Total bytes      : 1445
+Avg rate         : 2.5 pkt/s, 221.9 B/s
+
+Protocol distribution:
+  TCP            12 pkts       1187 bytes  ( 75.0%)
+  UDP             2 pkts        101 bytes  ( 12.5%)
+  ICMP            2 pkts        157 bytes  ( 12.5%)
+
+Top 5 source IPs:
+  127.0.0.1              16 pkts
+Top 5 destination IPs:
+  127.0.0.1              16 pkts
+Top 5 TCP destination ports:
+  8080(HTTP-alt)          6 pkts
+  41908                   6 pkts
+Top 5 UDP destination ports:
+  5353(mDNS)              1 pkts
+  53(DNS)                 1 pkts
+TCP flag combinations:
+  ACK                     5 pkts
+  PSH,ACK                 3 pkts
+  FIN,ACK                 2 pkts
+  SYN                     1 pkts
+  SYN,ACK                 1 pkts
+======================================================================
